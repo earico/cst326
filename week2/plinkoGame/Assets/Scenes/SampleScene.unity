@@ -26,7 +26,11 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_SkyboxMaterial: {fileID: 2100000, guid: 273c47d47194d88468cf95bfd27de4b8, type: 2}
+=======
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +41,13 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.002576641, g: 0.013924482, b: 0.028974026, a: 1}
+=======
+  m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,7 +132,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
 --- !u!1 &62318586
+=======
+--- !u!1 &110695684
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +144,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   - component: {fileID: 62318587}
   - component: {fileID: 62318591}
   - component: {fileID: 62318590}
@@ -138,17 +152,31 @@ GameObject:
   - component: {fileID: 62318588}
   m_Layer: 0
   m_Name: Mars
+=======
+  - component: {fileID: 110695688}
+  - component: {fileID: 110695687}
+  - component: {fileID: 110695686}
+  - component: {fileID: 110695685}
+  m_Layer: 0
+  m_Name: Peg
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
 --- !u!4 &62318587
 Transform:
+=======
+--- !u!136 &110695685
+CapsuleCollider:
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 62318586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -178,6 +206,9 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62318586}
+=======
+  m_GameObject: {fileID: 110695684}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -189,17 +220,30 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &62318590
+=======
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &110695686
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 62318586}
+=======
+  m_GameObject: {fileID: 110695684}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -213,7 +257,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   - {fileID: 2100000, guid: d6d0ae18327775b449b93234c3ed80b3, type: 2}
+=======
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -235,12 +283,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
 --- !u!33 &62318591
+=======
+--- !u!33 &110695687
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 62318586}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &85441705
@@ -264,11 +317,17 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &85441706
+=======
+  m_GameObject: {fileID: 110695684}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &110695688
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 85441705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -705,6 +764,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.4
 --- !u!1 &736460087
+=======
+  m_GameObject: {fileID: 110695684}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 2, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 522586857}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &522586856
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -712,21 +784,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   - component: {fileID: 736460088}
   - component: {fileID: 736460089}
   m_Layer: 0
   m_Name: Mars Rotation
+=======
+  - component: {fileID: 522586857}
+  m_Layer: 0
+  m_Name: GameObject
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
 --- !u!4 &736460088
+=======
+--- !u!4 &522586857
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 736460087}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -739,10 +822,24 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &736460089
 MonoBehaviour:
+=======
+  m_GameObject: {fileID: 522586856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0.70710707, w: 0.70710653}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 110695688}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &705507993
+GameObject:
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 736460087}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -750,6 +847,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705507995}
+  - component: {fileID: 705507994}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &705507994
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.802082
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &705507995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,12 +1022,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 55.5, z: -93.3}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!1 &1006432721
 GameObject:
@@ -1841,9 +2034,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes/SampleScene.unity
   - {fileID: 408468829}
+=======
+  - {fileID: 705507995}
+  - {fileID: 110695688}
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes/SampleScene.unity

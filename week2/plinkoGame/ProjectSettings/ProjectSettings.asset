@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
+<<<<<<< HEAD:week1/Solar System/ProjectSettings/ProjectSettings.asset
   productGUID: bf04a84933a814f4f9ead4e2df841870
+=======
+  productGUID: a3eea2e57d2d74af8bd0651ef2136660
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/ProjectSettings/ProjectSettings.asset
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD:week1/Solar System/ProjectSettings/ProjectSettings.asset
   productName: Solar System
+=======
+  productName: plinkoGame
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/ProjectSettings/ProjectSettings.asset
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -676,14 +684,22 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD:week1/Solar System/ProjectSettings/ProjectSettings.asset
   metroPackageName: Solar System
+=======
+  metroPackageName: plinkoGame
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/ProjectSettings/ProjectSettings.asset
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD:week1/Solar System/ProjectSettings/ProjectSettings.asset
   metroApplicationDescription: Solar System
+=======
+  metroApplicationDescription: plinkoGame
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/ProjectSettings/ProjectSettings.asset
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -752,10 +768,17 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
+<<<<<<< HEAD:week1/Solar System/ProjectSettings/ProjectSettings.asset
   cloudProjectId: 56260674-c23d-47c9-b4d4-3af994395721
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Solar System 2024-01-27_16-47-49
+=======
+  cloudProjectId: 396b0df3-c144-4f1e-b7be-727259742c7e
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: plinkoGame
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/ProjectSettings/ProjectSettings.asset
   organizationId: earicojr
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:week1/Solar System/Assets/Scenes.meta
 guid: 5ee4155025cfa834381b3e4830a836fc
+=======
+guid: b693b2bdab6364d5e8fa5edaf403d3a8
+>>>>>>> 8cc35fc (plinkoGame finished):week2/plinkoGame/Assets/Scenes.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
