@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ public class PaddleMovement : MonoBehaviour {
         Vector3 force = Vector3.right * horizontalValue;// * unitsPerSecond * Time.deltaTime;
 
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(force, ForceMode.Force);
+        rb.AddForce(force, ForceMode.VelocityChange);
     }
 
     // Update is called once per frame
