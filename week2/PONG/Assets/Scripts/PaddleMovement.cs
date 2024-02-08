@@ -10,11 +10,23 @@ public class PaddleMovement : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        float horizontalValue = Input.GetAxis("Horizontal");
-        Vector3 force = Vector3.right * horizontalValue;// * unitsPerSecond * Time.deltaTime;
-
+        float leftPad = Input.GetAxis("LeftPaddle");
+        float rightPad = Input.GetAxis("RightPaddle");
+        //float VerticalValueY = Input.GetAxis("");
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(force, ForceMode.VelocityChange);
+        Vector3 force;
+
+        if (rb.name == "Left Paddle") {
+            force = Vector3.up * leftPad;
+            rb.velocity = new Vector3(0, 10, 0) * leftPad;
+            //rb.AddForce(force, ForceMode.Acceleration);
+        }
+
+        if (rb.name == "Right Paddle") {
+            force = Vector3.up * rightPad;
+            rb.velocity = new Vector3(0, 10, 0) * rightPad;
+            //rb.AddForce(force, ForceMode.Acceleration);
+        }
     }
 
     // Update is called once per frame
@@ -31,14 +43,18 @@ public class PaddleMovement : MonoBehaviour {
             Bounds bounds = bc.bounds;
             float maxX = bounds.max.x;
             float maxY = bounds.max.y;
-
-            Debug.Log($"maxX = {maxX}, maxY = {maxY}");
+            float minX = bounds.min.x;
+            float minY = bounds.min.y;
+            Debug.Log($"maxX = {maxX}, maxY = {maxY}, minX = {minX}, minY = {minY}");
 
             Quaternion bounceRotation = Quaternion.Euler(0f, 0f, 60f);
             Vector3 bounceDirection = bounceRotation * Vector3.up;
 
             Rigidbody rb = collision.rigidbody;
-            rb.AddForce(bounceDirection * 300f, ForceMode.Force);
+            //rb.AddForce(bounceDirection * 1f, ForceMode.VelocityChange);
+            rb.velocity = -rb.velocity * unitsPerSecond;
+            bounceRotation = Quaternion.Euler(0f, 0f, 0f);
+            unitsPerSecond += 0.5f;
         }
     }
 }
