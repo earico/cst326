@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Right player scored: {rightPlayerScore}");
 
             if (rightPlayerScore == scoreToWin) {
+                rightPlayerScore++;
                 Debug.Log("Right player wins!");
                 gameOver.text = $"PLAYER 2 WINS!";
             }
@@ -66,15 +67,16 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Left player scored: {leftPlayerScore}");
 
             if (leftPlayerScore == scoreToWin) {
+                leftPlayerScore++;
                 Debug.Log("Left player wins!");
                 gameOver.text = $"PLAYER 1 WINS!";
             }
 
             else {
-                if (leftPlayerScore < 4) {
+                if (rightPlayerScore < 4) {
                     colorState1 = "#008000";
                 }
-                else if (leftPlayerScore >= 4 && leftPlayerScore <= 7) {
+                else if (rightPlayerScore >= 4 && rightPlayerScore <= 7) {
                     colorState1 = "#FFFF00";
                 }
                 else {

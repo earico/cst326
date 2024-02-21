@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -26,6 +27,10 @@ public class LevelParser : MonoBehaviour
         {
             ReloadLevel();
         }
+    }
+
+    private void FixedUpdate() {
+        
     }
 
     // --------------------------------------------------------------------------
@@ -75,6 +80,11 @@ public class LevelParser : MonoBehaviour
                 else if (letter == 'b') {
                     Vector3 newPos = new Vector3(column, row, 0f);
                     Instantiate(brickPrefab, newPos, Quaternion.identity, environmentRoot);
+                }
+                
+                else if (letter == '?') {
+                    Vector3 newPos = new Vector3(column, row, 0f);
+                    Instantiate(questionBoxPrefab, newPos, Quaternion.identity, environmentRoot);
                 }
             }
             
