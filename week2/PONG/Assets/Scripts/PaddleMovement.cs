@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PaddleMovement : MonoBehaviour {
-    public float unitsPerSecond = 3f;
+    public float unitsPerSecond = 1f;
     // Start is called before the first frame update
     void Start() {
         
@@ -48,13 +48,12 @@ public class PaddleMovement : MonoBehaviour {
             Debug.Log($"maxX = {maxX}, maxY = {maxY}, minX = {minX}, minY = {minY}");
 
             Quaternion bounceRotation = Quaternion.Euler(0f, 0f, 60f);
-            Vector3 bounceDirection = bounceRotation * Vector3.up;
-
             Rigidbody rb = collision.rigidbody;
+            Vector3 bounceDirection = bounceRotation * rb.velocity;
+            
             //rb.AddForce(bounceDirection * 1f, ForceMode.VelocityChange);
-            rb.velocity = -rb.velocity * unitsPerSecond;
-            bounceRotation = Quaternion.Euler(0f, 0f, 0f);
-            unitsPerSecond += 0.5f;
+            rb.velocity = bounceDirection * unitsPerSecond;
+            unitsPerSecond += 4f;
         }
     }
 }
