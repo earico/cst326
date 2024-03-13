@@ -2,82 +2,99 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class Enemy : MonoBehaviour {
     public GameManager gm;
-    private int count = 0;
-    private String dir = "right";
-    
-    // Start is called before the first frame update
-    void OnCollisionEnter2D(Collision2D collision) {
-      Debug.Log("Ouch!");
-      if (gameObject.name == "Red(Clone)") {
-          gm.score += 100;
-          gm.enemyCount--;
-          Destroy(gameObject);
-          Destroy(collision.gameObject);
-      }
-      
-      if (gameObject.name == "Yellow(Clone)") {
-          gm.score += 75;
-          gm.enemyCount--;
-          Destroy(gameObject);
-          Destroy(collision.gameObject);
-      }
-      
-      if (gameObject.name == "Blue(Clone)") {
-          gm.score += 50;
-          gm.enemyCount--;
-          Destroy(gameObject);
-          Destroy(collision.gameObject);
-      }
-      
-      if (gameObject.name == "Green(Clone)") {
-          gm.score += 25;
-          gm.enemyCount--;
-          Destroy(gameObject);
-          Destroy(collision.gameObject);
-      }
+    public GameObject eBullet;
+    public int speed = 10;
+    public GameObject explosionPrefab;
+
+    private int minInterval = 1;
+    private int maxInterval = 1000;
+    [SerializeField] private Transform shootingOffset;
+
+    void Start() {
+        gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        if (gameObject.name == "Red") {
+            GameObject bOffset = new GameObject("Enemy Bullet Offset");
+            bOffset.transform.parent = gameObject.transform;
+            bOffset.transform.position = gameObject.transform.position + new Vector3(0, -1.001f, 0);
+            shootingOffset = bOffset.GetComponent<Transform>();
+        }
+        else {
+            shootingOffset = transform;
+        }
+    }
+
+    private void Update() {
+        float ePosX = shootingOffset.transform.position.x;
+        float ePosY = shootingOffset.transform.position.y;
+        shootingOffset.position = new Vector3(ePosX, ePosY, 0);
     }
 
     private void FixedUpdate() {
-        Transform enemyPos = GetComponent<Transform>();
-        float startX = enemyPos.position.x;
-        float startY = enemyPos.position.y;
-        float multiplier = 1f;
+        int RandomInterval = Random.Range(minInterval, maxInterval);
 
-        if (gm.enemyCount < 18) {
-            multiplier = 2f;
+        if (gameObject.name == "Red" && RandomInterval == 500) {
+            GameObject shot = Instantiate(eBullet, shootingOffset.position, Quaternion.Euler(0, 0, -180));
+            Destroy(shot, 3f);
         }
+    }
 
-        if (gm.enemyCount < 9) {
-            multiplier = 3f;
-        }
+    void OnCollisionEnter2D(Collision2D collision) {
+        GameObject explosion = Instantiate(explosionPrefab, collision.GetContact(0).point, Quaternion.identity);
+        Animator anim = explosion.GetComponent<Animator>();
+        float duration = anim.GetCurrentAnimatorStateInfo(0).length;
         
-        if (dir == "right" && count < 320) {
-            Vector3 newPos = new Vector3(1, 0, 0);
-            enemyPos.position += newPos * Time.deltaTime * multiplier;
-            count++;
+        if (gameObject.name == "Red") {
+            gm.score += 100;
+            gm.enemyCount--;
+            
+            anim.Play("enemyExplosion");
+            
+            Destroy(explosion, duration);
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+          
+        if (gameObject.name == "Yellow") {
+            gm.score += 75;
+            gm.enemyCount--;
+            
+            anim.Play("enemyExplosion");
+            
+            Destroy(explosion, duration);
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+          
+        if (gameObject.name == "Blue") {
+            gm.score += 50;
+            gm.enemyCount--;
+            
+            anim.Play("enemyExplosion");
+            
+            Destroy(explosion, duration);
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+          
+        if (gameObject.name == "Green") {
+            gm.score += 25;
+            gm.enemyCount--;
+            
+            anim.Play("enemyExplosion");
+            
+            Destroy(explosion, duration);
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
 
-        if (dir == "left" && count > -320) {
-            Vector3 newPos = new Vector3(-1, 0, 0);
-            enemyPos.position += newPos * Time.deltaTime * multiplier;
-            count--;
+        if (collision.gameObject.name == "Player") {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
-
-        if (count == 320) {
-            Vector3 newPos = new Vector3(0, -0.5f, 0);
-            enemyPos.position += newPos;
-            dir = "left";
-        }
-
-        if (count == -320) {
-            Vector3 newPos = new Vector3(0, -0.5f, 0);
-            enemyPos.position += newPos;
-            dir = "right";
-        }
-        new WaitForSeconds(1f);
     }
 }

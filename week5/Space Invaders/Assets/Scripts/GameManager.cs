@@ -1,14 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using TMPro;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
+
 public class GameManager : MonoBehaviour {
     public int score, hiScore = 0;
     public int enemyCount = 36;
-    public TextMeshProUGUI scoreText, hiScoreText;
-    public GameObject red, yellow, blue, green, barricade;
+    public TextMeshProUGUI scoreText, hiScoreText, resultsText;
+    public GameObject barrage, barricade;
     public GameObject enemyStart;
     public GameObject barricadeStart;
+
+    private String dir = "right";
     
     // Start is called before the first frame update
     void Start() {
@@ -17,41 +24,10 @@ public class GameManager : MonoBehaviour {
     }
 
     void Setup() {
-        float eMatrixY = enemyStart.transform.position.y;
-        float eMatrixX = enemyStart.transform.position.x;
-        Vector3 bStart = barricadeStart.gameObject.transform.position;
-        for (int i = 8; i > 0; i-=2) {
-            for (int j = 0; j < 18; j+=2) {
-                Vector3 spawnPos = new Vector3(eMatrixX, eMatrixY, 0);
-                if (i == 8) {
-                    GameObject newEnemy = Instantiate(red, spawnPos, Quaternion.identity);
-                    Enemy eComp = newEnemy.GetComponent<Enemy>();
-                    eComp.gm = FindObjectOfType<GameManager>();
-                }
-                
-                else if (i == 6) {
-                    GameObject newEnemy = Instantiate(yellow, spawnPos, Quaternion.identity);
-                    Enemy eComp = newEnemy.GetComponent<Enemy>();
-                    eComp.gm = FindObjectOfType<GameManager>();
-                }
-                
-                else if (i == 4) {
-                    GameObject newEnemy = Instantiate(blue, spawnPos, Quaternion.identity);
-                    Enemy eComp = newEnemy.GetComponent<Enemy>();
-                    eComp.gm = FindObjectOfType<GameManager>();
-                }
-                
-                else if (i == 2) {
-                    GameObject newEnemy = Instantiate(green, spawnPos, Quaternion.identity);
-                    Enemy eComp = newEnemy.GetComponent<Enemy>();
-                    eComp.gm = FindObjectOfType<GameManager>();
-                }
-                
-                eMatrixX += 2;
-            }
-            eMatrixY -= 2;
-            eMatrixX -= 18;
-        }
+        Vector3 eStart = enemyStart.transform.position;
+        Vector3 bStart = barricadeStart.transform.position;
+
+        Instantiate(barrage, eStart, Quaternion.identity);
 
         for (int i = 0; i < 4; i++) {
             Instantiate(barricade, bStart, Quaternion.identity);
@@ -63,6 +39,10 @@ public class GameManager : MonoBehaviour {
         if (score > hiScore) {
             hiScore = score;
         }
+
+        if (enemyCount == 0) {
+            resultsText.text = "YOU WIN";
+        }
         scoreText.text = $"SCORE\n{score:0000}";
         hiScoreText.text = $"HI-SCORE\n{hiScore:0000}";
     }
@@ -70,5 +50,47 @@ public class GameManager : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         SetScoreText();
+    }
+    
+    void FixedUpdate() {
+        GameObject Ebarrage = GameObject.Find("Enemy Barrage(Clone)");
+        Vector3 enemyPos = Ebarrage.transform.position;
+        float multiplier = 1f;
+        int clampVal = 7;
+
+        if (enemyCount < 18) {
+            multiplier = 2f;
+        }
+
+        if (enemyCount < 9) {
+            multiplier = 3f;
+        }
+        
+        if (dir == "right" && enemyPos.x < clampVal) {
+            Vector3 newPos = new Vector3(1, 0, 0);
+            enemyPos += newPos * Time.deltaTime * multiplier;
+        }
+
+        if (dir == "left" && enemyPos.x > -clampVal) {
+            Vector3 newPos = new Vector3(-1, 0, 0);
+            enemyPos += newPos * Time.deltaTime * multiplier;
+        }
+
+        enemyPos.x = Mathf.Clamp(enemyPos.x, -clampVal, clampVal);
+        
+        if (enemyPos.x == clampVal) {
+            Vector3 newPos = new Vector3(0, -1, 0);
+            enemyPos += newPos;
+            dir = "left";
+        }
+
+        if (enemyPos.x == -clampVal) {
+            Vector3 newPos = new Vector3(0, -1, 0);
+            enemyPos += newPos;
+            dir = "right";
+        }
+
+        // Updating enemy position
+        Ebarrage.transform.position = enemyPos;
     }
 }
