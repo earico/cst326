@@ -147,7 +147,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219438328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -186,19 +186,11 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-<<<<<<< HEAD
-  m_Size: {x: 31, y: 13.7}
+  m_Size: {x: 18.5, y: 8.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
-=======
-  m_Size: {x: 32.1, y: 13.9}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
   m_SpriteSortPoint: 0
 --- !u!4 &219438330
 Transform:
@@ -209,12 +201,8 @@ Transform:
   m_GameObject: {fileID: 219438328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 240, y: 100, z: 0}
-=======
-  m_LocalPosition: {x: 0, y: 0, z: 0}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalPosition: {x: -898.75, y: -435.75, z: 0}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 677670450}
@@ -349,11 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -437,13 +421,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-<<<<<<< HEAD
-  m_fontAsset: {fileID: 11400000, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-  m_sharedMaterial: {fileID: 5599772664905004275, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-=======
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
+  m_fontAsset: {fileID: 11400000, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
+  m_sharedMaterial: {fileID: 8539081942723030747, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -715,11 +694,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-<<<<<<< HEAD
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-=======
-  m_BackGroundColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -768,8 +743,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535243584}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 812.9, y: 359, z: -314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -869,10 +844,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 219438330}
   - {fileID: 934158897}
   - {fileID: 250035352}
   - {fileID: 1321568210}
-  - {fileID: 219438330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -984,13 +959,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start Game
   m_isRightToLeft: 0
-<<<<<<< HEAD
-  m_fontAsset: {fileID: 11400000, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-  m_sharedMaterial: {fileID: 5599772664905004275, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-=======
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
+  m_fontAsset: {fileID: 11400000, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
+  m_sharedMaterial: {fileID: 8539081942723030747, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1173,11 +1143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1280,17 +1246,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Space Invaders
+  m_text: 'Space Infiltrators
 
 '
   m_isRightToLeft: 0
-<<<<<<< HEAD
-  m_fontAsset: {fileID: 11400000, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-  m_sharedMaterial: {fileID: 5599772664905004275, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-=======
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
->>>>>>> ce4d47fd90af7d4f7deafa8d8b3d426c4dc5e5e5
+  m_fontAsset: {fileID: 11400000, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
+  m_sharedMaterial: {fileID: 8539081942723030747, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

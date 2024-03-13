@@ -223,8 +223,8 @@ MonoBehaviour:
 
     0000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-  m_sharedMaterial: {fileID: 5599772664905004275, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
+  m_sharedMaterial: {fileID: 8539081942723030747, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3609444698749228658, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cafef48e04573742a66b97da453ab8f, type: 2}
     - target: {fileID: 3791936555625136708, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
       propertyPath: m_Offset.x
       value: 0
@@ -702,6 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   hiScore: 0
+  enemyCount: 36
   scoreText: {fileID: 481733657}
   hiScoreText: {fileID: 1531885788}
   red: {fileID: 7483517710255911465, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
@@ -802,8 +807,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "HI-SCORE\n   0000"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
-  m_sharedMaterial: {fileID: 5599772664905004275, guid: 5ce9327904bf70848b0c0dcd752fcfb2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
+  m_sharedMaterial: {fileID: 8539081942723030747, guid: 8309a4e6a73e0804b8fa6b738685e150, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
