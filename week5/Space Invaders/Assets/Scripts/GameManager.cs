@@ -10,15 +10,18 @@ using Vector3 = UnityEngine.Vector3;
 public class GameManager : MonoBehaviour {
     public int score, hiScore = 0;
     public int enemyCount = 36;
+    public bool playerAlive = true;
     public TextMeshProUGUI scoreText, hiScoreText, resultsText;
     public GameObject barrage, barricade;
     public GameObject enemyStart;
     public GameObject barricadeStart;
+    public SceneSwitch sm;
 
     private String dir = "right";
     
     // Start is called before the first frame update
     void Start() {
+        sm = GameObject.Find("SceneSwitcher").GetComponent<SceneSwitch>();
         SetScoreText();
         Setup();
     }
@@ -42,6 +45,7 @@ public class GameManager : MonoBehaviour {
 
         if (enemyCount == 0) {
             resultsText.text = "YOU WIN";
+            sm.EndGame();
         }
         scoreText.text = $"SCORE\n{score:0000}";
         hiScoreText.text = $"HI-SCORE\n{hiScore:0000}";

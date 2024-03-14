@@ -14,9 +14,15 @@ public class Enemy : MonoBehaviour {
     private int minInterval = 1;
     private int maxInterval = 1000;
     [SerializeField] private Transform shootingOffset;
+    private AudioManager am;
+    private AudioSource aSrc;
 
     void Start() {
         gm = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        am = GameObject.Find("Audio Manager").GetComponent<AudioManager>();
+        aSrc = gameObject.AddComponent<AudioSource>();
+        aSrc.clip = am.enemyExpl;
+        aSrc.volume = 0.2f;
         if (gameObject.name == "Red") {
             GameObject bOffset = new GameObject("Enemy Bullet Offset");
             bOffset.transform.parent = gameObject.transform;
@@ -38,6 +44,7 @@ public class Enemy : MonoBehaviour {
         int RandomInterval = Random.Range(minInterval, maxInterval);
 
         if (gameObject.name == "Red" && RandomInterval == 500) {
+            am.PlaySFX("eShoot");
             GameObject shot = Instantiate(eBullet, shootingOffset.position, Quaternion.Euler(0, 0, -180));
             Destroy(shot, 3f);
         }
@@ -47,48 +54,69 @@ public class Enemy : MonoBehaviour {
         GameObject explosion = Instantiate(explosionPrefab, collision.GetContact(0).point, Quaternion.identity);
         Animator anim = explosion.GetComponent<Animator>();
         float duration = anim.GetCurrentAnimatorStateInfo(0).length;
+        BoxCollider2D col2D = GetComponent<BoxCollider2D>();
         
         if (gameObject.name == "Red") {
+            Transform childObj = gameObject.transform.Find("RedEnemyIdle_0");
+            SpriteRenderer sprite = childObj.GetComponent<SpriteRenderer>();
             gm.score += 100;
             gm.enemyCount--;
             
+            aSrc.Play();
             anim.Play("enemyExplosion");
+            col2D.enabled = false;
+            sprite.enabled = false;
             
             Destroy(explosion, duration);
-            Destroy(gameObject);
+            Destroy(gameObject, duration);
             Destroy(collision.gameObject);
         }
           
         if (gameObject.name == "Yellow") {
+            Transform childObj = gameObject.transform.Find("YellowEnemyIdle_0");
+            SpriteRenderer sprite = childObj.GetComponent<SpriteRenderer>();
             gm.score += 75;
             gm.enemyCount--;
             
+            aSrc.Play();
             anim.Play("enemyExplosion");
+            col2D.enabled = false;
+            sprite.enabled = false;
             
             Destroy(explosion, duration);
-            Destroy(gameObject);
+            Destroy(gameObject, duration);
             Destroy(collision.gameObject);
         }
           
         if (gameObject.name == "Blue") {
+            Transform childObj = gameObject.transform.Find("BlueEnemyIdle_0");
+            SpriteRenderer sprite = childObj.GetComponent<SpriteRenderer>();
             gm.score += 50;
             gm.enemyCount--;
             
+            aSrc.Play();
             anim.Play("enemyExplosion");
+            col2D.enabled = false;
+            sprite.enabled = false;
             
             Destroy(explosion, duration);
-            Destroy(gameObject);
+            Destroy(gameObject, duration);
             Destroy(collision.gameObject);
         }
           
         if (gameObject.name == "Green") {
+            Transform childObj = gameObject.transform.Find("GreenEnemyIdle_0");
+            SpriteRenderer sprite = childObj.GetComponent<SpriteRenderer>();
             gm.score += 25;
             gm.enemyCount--;
             
+            aSrc.Play();
             anim.Play("enemyExplosion");
+            col2D.enabled = false;
+            sprite.enabled = false;
             
             Destroy(explosion, duration);
-            Destroy(gameObject);
+            Destroy(gameObject, duration);
             Destroy(collision.gameObject);
         }
 
