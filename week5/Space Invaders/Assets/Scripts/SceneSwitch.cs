@@ -25,15 +25,6 @@ public class SceneSwitch : MonoBehaviour {
         StartCoroutine(Menu());
     }
     
-    private void Start() {
-            
-    }
-
-    private void Update() {
-        if (SceneManager.GetActiveScene().name == "Credits") {
-            RestartGame();
-        }
-    }
 
     IEnumerator Menu() {
         yield return new WaitForSeconds(7f);

@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour {
         if (enemyCount == 0) {
             resultsText.text = "YOU WIN";
             sm.EndGame();
+            sm.RestartGame();
         }
         scoreText.text = $"SCORE\n{score:0000}";
         hiScoreText.text = $"HI-SCORE\n{hiScore:0000}";

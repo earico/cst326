@@ -53,5 +53,6 @@ public class Player : MonoBehaviour {
         Destroy(gameObject);
         
         gm.sm.EndGame();
+        gm.sm.RestartGame();
     }
 }
