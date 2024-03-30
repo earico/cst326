@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,32 +9,33 @@ public class WaveSpawner : MonoBehaviour {
     public TextMeshProUGUI waveTimer;
 
     private float countdown = 3f;
-    private int waveIndex = 0;
+    private int waveIndex;
 
-    void Start() {
-        
+    private void Start() {
     }
 
-    void Update() {
+    private void Update() {
         if (countdown <= 0f) {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
         }
 
         countdown -= Time.deltaTime;
-        waveTimer.text = $"Next Wave : {Mathf.Round(countdown)}";
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        waveTimer.text = string.Format("{0:00.00}", countdown);
     }
 
-    IEnumerator SpawnWave() {
-        Debug.Log($"Wave incoming!");
+    private IEnumerator SpawnWave() {
+        Debug.Log("Wave incoming!");
         waveIndex++;
-        for (int i = 0; i < waveIndex; i++) {
+        PlayerStats.Rounds++;
+        for (var i = 0; i < waveIndex; i++) {
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f);
         }
     }
 
-    void SpawnEnemy() {
+    private void SpawnEnemy() {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }
